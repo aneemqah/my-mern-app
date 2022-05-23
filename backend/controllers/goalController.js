@@ -1,7 +1,7 @@
 const asyncHandler = require('express-async-handler');
 const { Error } = require('mongoose');
 
-const Goal = require('../models/goal.model');
+const Goal = require('../models/goalModel');
 
 // Get goals
 const getGoals = asyncHandler(async (req, res) => {
