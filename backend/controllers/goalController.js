@@ -1,10 +1,10 @@
 // Get goals
-const getGoals = (req, res) => {
+const getGoals = async (req, res) => {
   res.status(200).json({ message: 'Get goals' });
 };
 
 // Post goal
-const setGoal = (req, res) => {
+const setGoal = async (req, res) => {
   if (!req.body.text) {
     res.status(400);
     throw new Error('Please enter some text');
@@ -13,12 +13,12 @@ const setGoal = (req, res) => {
 };
 
 // Update goal
-const updateGoal = (req, res) => {
+const updateGoal = async (req, res) => {
   res.status(200).json({ message: `Update goal ${req.params.id}` });
 };
 
 // Delete goal
-const deleteGoal = (req, res) => {
+const deleteGoal = async (req, res) => {
   res.status(200).json({ message: `Delete goal ${req.params.id}` });
 };
 
