@@ -1,7 +1,26 @@
+// Get goals
 const getGoals = (req, res) => {
   res.status(200).json({ message: 'Get goals' });
 };
 
+// Post goal
+const setGoal = (req, res) => {
+  res.status(200).json({ message: 'Set goals' });
+};
+
+// Update goal
+const updateGoal = (req, res) => {
+  res.status(200).json({ message: `Update goal ${req.params.id}` });
+};
+
+// Delete goal
+const deleteGoal = (req, res) => {
+  res.status(200).json({ message: `Delete goal ${req.params.id}` });
+};
+
 module.exports = {
   getGoals,
+  setGoal,
+  updateGoal,
+  deleteGoal,
 };
